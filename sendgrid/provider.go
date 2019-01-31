@@ -22,7 +22,13 @@ func Provider() terraform.ResourceProvider {
 		ResourcesMap: map[string]*schema.Resource{
 			"sendgrid_template":         resourceSendgridTemplate(),
 			"sendgrid_template_version": resourceSendgridTemplateVersion(),
+			"sendgrid_whitelabel_domain": resourceSendgridWhitelabelDomain(),
 		},
+
+        //Untested / Uncompleted
+		//DataSourcesMap: map[string]*schema.Resource{
+		//	"sendgrid_whitelabel_domain":        dataSourceSendgridWhitelabelDomain(),
+        //},
 
 		ConfigureFunc: providerConfigure,
 	}
